@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>India H-1B Slot Tracker — Mumbai &amp; Chennai</title>
-  <meta name="description" content="Crowdsourced public reports of US H-1B biometrics (VAC) and interview slots for Mumbai and Chennai. Not official." />
+  <meta name="description" content="Tracks when Mumbai and Chennai H-1B biometrics and interview slots are reported by public crowdsourced trackers. Not a booking tool. Not official — book only on usvisascheduling.com." />
   <style>
     :root {
       --bg: #0f1419;
@@ -35,7 +35,20 @@
     }
     .wrap { max-width: 960px; margin: 0 auto; padding: 0 1rem 2.5rem; }
     h1 { font-size: 1.35rem; margin: 0 0 0.35rem; letter-spacing: -0.02em; }
-    .sub { color: var(--muted); font-size: 0.9rem; margin: 0; }
+    .sub { color: var(--muted); font-size: 0.95rem; margin: 0; max-width: 42rem; }
+    .sub em { color: var(--text); font-style: normal; font-weight: 600; }
+    .purpose {
+      margin: 0.75rem 0 0;
+      padding: 0.7rem 0.9rem;
+      background: #132033;
+      border: 1px solid #1e4a7a;
+      border-left: 3px solid var(--accent);
+      border-radius: 10px;
+      color: #dbeafe;
+      font-size: 0.9rem;
+      max-width: 42rem;
+    }
+    .purpose strong { color: #93c5fd; }
     .meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 0.85rem; font-size: 0.85rem; color: var(--muted); }
     .pill {
       display: inline-flex; align-items: center; gap: 0.35rem;
@@ -106,7 +119,12 @@
   <header>
     <div class="wrap">
       <h1>India H-1B Slot Tracker</h1>
-      <p class="sub">Mumbai &amp; Chennai · Biometrics (VAC) &amp; Interview · Crowdsourced public reports</p>
+      <p class="sub">Tracks when Mumbai and Chennai H-1B biometrics and interview slots are being <em>reported</em> by public crowdsourced trackers.</p>
+      <p class="purpose">
+        <strong>Not a booking tool.</strong> This site does not reserve slots.
+        Its purpose is to help you see patterns and reported opening times so you know when to check
+        <a href="https://www.usvisascheduling.com/" rel="noopener noreferrer" target="_blank">usvisascheduling.com</a> yourself.
+      </p>
       <div class="meta">
         <span class="pill">Updated: <strong id="updatedAt">—</strong></span>
         <span class="pill">Timezone sense: America/Los_Angeles (PT)</span>
@@ -116,11 +134,10 @@
   </header>
   <main class="wrap">
     <div class="disclaimer" role="note">
-      <strong>Disclaimer:</strong> This dashboard aggregates <em>crowdsourced / third-party</em> reports only.
-      It is <strong>not</strong> official US Mission India or CGI data.
-      Availability changes by the minute. <strong>Book appointments only on
+      <strong>Not official.</strong> Crowdsourced public reports only — not US Mission India or CGI data.
+      <strong>Book only on
       <a href="https://www.usvisascheduling.com/" rel="noopener noreferrer" target="_blank">usvisascheduling.com</a></strong>.
-      Never share portal passwords with slot agents.
+      Never share portal passwords.
     </div>
 
     <div class="stats" id="stats"></div>
