@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>India H-1B Slot Tracker — Mumbai &amp; Chennai</title>
+  <meta name="description" content="Crowdsourced public reports of US H-1B biometrics (VAC) and interview slots for Mumbai and Chennai. Not official." />
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a2332;
+      --border: #2d3a4f;
+      --text: #e7ecf3;
+      --muted: #9aa8bc;
+      --accent: #3b82f6;
+      --ok: #22c55e;
+      --warn: #f59e0b;
+      --bad: #ef4444;
+      --bio: #06b6d4;
+      --int: #a78bfa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    header {
+      padding: 1.25rem 1rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #152033 0%, var(--bg) 100%);
+    }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 1rem 2.5rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.35rem; letter-spacing: -0.02em; }
+    .sub { color: var(--muted); font-size: 0.9rem; margin: 0; }
+    .meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: 0.85rem; font-size: 0.85rem; color: var(--muted); }
+    .pill {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.2rem 0.55rem; border-radius: 999px;
+      background: var(--card); border: 1px solid var(--border); font-size: 0.75rem;
+    }
+    .disclaimer {
+      margin: 1rem 0;
+      padding: 0.85rem 1rem;
+      background: #2a1f0a;
+      border: 1px solid #6b4e16;
+      border-radius: 10px;
+      color: #fde68a;
+      font-size: 0.88rem;
+    }
+    .disclaimer strong { color: #fbbf24; }
+    .filters {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      margin: 1rem 0 0.75rem;
+    }
+    .filters button {
+      appearance: none; border: 1px solid var(--border); background: var(--card);
+      color: var(--text); padding: 0.45rem 0.75rem; border-radius: 8px;
+      font-size: 0.85rem; cursor: pointer;
+    }
+    .filters button.active { border-color: var(--accent); background: #1e3a5f; color: #93c5fd; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.65rem; margin-bottom: 1rem; }
+    .stat {
+      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 0.75rem 0.9rem;
+    }
+    .stat .n { font-size: 1.4rem; font-weight: 700; }
+    .stat .l { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: var(--card); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 640px; }
+    th, td { padding: 0.7rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; background: #141c28; position: sticky; top: 0; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(59,130,246,0.06); }
+    .badge {
+      display: inline-block; padding: 0.15rem 0.45rem; border-radius: 6px;
+      font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em;
+    }
+    .badge.bio { background: rgba(6,182,212,0.15); color: var(--bio); }
+    .badge.int { background: rgba(167,139,250,0.15); color: var(--int); }
+    .badge.est { background: rgba(245,158,11,0.15); color: var(--warn); margin-left: 0.25rem; }
+    a { color: #93c5fd; }
+    a:hover { color: #bfdbfe; }
+    .notes { color: var(--muted); font-size: 0.78rem; max-width: 280px; }
+    section h2 { font-size: 1.05rem; margin: 1.75rem 0 0.65rem; }
+    .sources { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+    .sources li {
+      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 0.7rem 0.85rem; font-size: 0.85rem;
+    }
+    .status { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; }
+    .status.ok, .status.ok_snippets { color: var(--ok); }
+    .status.blocked, .status.no_public_data, .status.stale, .status.error { color: var(--warn); }
+    footer { margin-top: 2rem; color: var(--muted); font-size: 0.78rem; }
+    .empty { padding: 1.5rem; text-align: center; color: var(--muted); }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.15rem; }
+      table { min-width: 520px; font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>India H-1B Slot Tracker</h1>
+      <p class="sub">Mumbai &amp; Chennai · Biometrics (VAC) &amp; Interview · Crowdsourced public reports</p>
+      <div class="meta">
+        <span class="pill">Updated: <strong id="updatedAt">—</strong></span>
+        <span class="pill">Timezone sense: America/Los_Angeles (PT)</span>
+        <span class="pill">Visa: H-1B only</span>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="disclaimer" role="note">
+      <strong>Disclaimer:</strong> This dashboard aggregates <em>crowdsourced / third-party</em> reports only.
+      It is <strong>not</strong> official US Mission India or CGI data.
+      Availability changes by the minute. <strong>Book appointments only on
+      <a href="https://www.usvisascheduling.com/" rel="noopener noreferrer" target="_blank">usvisascheduling.com</a></strong>.
+      Never share portal passwords with slot agents.
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="filters" id="filters" role="group" aria-label="Filters">
+      <button type="button" data-filter="all" class="active">All</button>
+      <button type="button" data-filter="Mumbai">Mumbai</button>
+      <button type="button" data-filter="Chennai">Chennai</button>
+      <button type="button" data-filter="biometrics">Biometrics</button>
+      <button type="button" data-filter="interview">Interview</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>City</th>
+            <th>Type</th>
+            <th>Availability</th>
+            <th>Count</th>
+            <th>Source</th>
+            <th>Reported</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="empty" id="empty" hidden>No rows match this filter.</div>
+    </div>
+
+    <section>
+      <h2>Sources checked</h2>
+      <ul class="sources" id="sources"></ul>
+    </section>
+
+    <footer>
+      Built for personal sharing · Refresh with <code>./refresh.sh</code> or <code>node scripts/refresh.mjs</code> ·
+      Does not scrape official CGI / usvisascheduling.com.
+    </footer>
+  </main>
+  <script id="dashboard-data" type="application/json">{"updatedAt":"2026-09-26T11:57:57-07:00","slots":[{"city":"Chennai","type":"biometrics","visa":"H-1B","availabilityDate":"2026-10-15","count":2,"source":"VisaGrader","sourceUrl":"https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B","reportedAt":"2026-11-25T17:12:00Z","notes":"Parsed from VisaGrader HTML table"},{"city":"Chennai","type":"biometrics","visa":"H-1B","availabilityDate":"2026-11-02","count":2,"source":"VisaGrader","sourceUrl":"https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B","reportedAt":"2026-11-25T17:12:00Z","notes":"Parsed from VisaGrader HTML table"},{"city":"Mumbai","type":"interview","visa":"H-1B","availabilityDate":"2026-11-08","count":null,"source":"WaitDelta (estimate)","sourceUrl":"https://waitdelta.com/visa-wait/us/mumbai/h1b","reportedAt":"2026-09-24","notes":"Not a live calendar slot. WaitDelta ~45-day petition-based interview wait estimate."},{"city":"Chennai","type":"interview","visa":"H-1B","availabilityDate":"2026-11-08","count":null,"source":"WaitDelta (estimate)","sourceUrl":"https://waitdelta.com/visa-wait/us/chennai/h1b","reportedAt":"2026-09-24","notes":"Not a live calendar slot. WaitDelta ~45-day petition-based interview wait estimate."},{"city":"Chennai","type":"interview","visa":"H-1B","availabilityDate":"2026-11-23","count":10,"source":"VisaGrader","sourceUrl":"https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B","reportedAt":"2026-11-23T20:53:00Z","notes":"Parsed from VisaGrader HTML table"}],"sourcesChecked":[{"name":"VisaGrader India","url":"https://visagrader.com/us-visa-time-slots-availability/india-ind","status":"ok","detail":"Parsed 3 Mumbai/Chennai H-1B biometrics/interview row(s)"},{"name":"VisaGrader Chennai H-1B","url":"https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B","status":"ok","detail":"Parsed 3 Mumbai/Chennai H-1B biometrics/interview row(s)"},{"name":"VisaGrader Mumbai H-1B","url":"https://visagrader.com/us-visa-time-slots-availability/india-ind/mumbai-P139/h1b-visa-H1B","status":"ok","detail":"Parsed 0 Mumbai/Chennai H-1B biometrics/interview row(s); Mumbai page reports no recent H-1B activity"},{"name":"WaitDelta Mumbai H-1B","url":"https://waitdelta.com/visa-wait/us/mumbai/h1b","status":"ok","detail":"Interview wait ~45 days; last updated September 24, 2026"},{"name":"WaitDelta Chennai H-1B","url":"https://waitdelta.com/visa-wait/us/chennai/h1b","status":"ok","detail":"Interview wait ~45 days; last updated September 24, 2026"},{"name":"VisaSlots.info","url":"https://visaslots.info/","status":"blocked","detail":"HTTP 403 (likely Cloudflare)"},{"name":"CheckVisaSlots","url":"https://checkvisaslots.com/","status":"no_public_data","detail":"Site reachable; no public Mumbai/Chennai H-1B slot table to parse"},{"name":"USVisaSlotsInfo H-1B","url":"https://www.usvisaslotsinfo.com/visa/h-1b","status":"stale","detail":"Page fetchable but last-seen timestamps are Jan 2026 (e.g. Mumbai VAC 2026-01-28); excluded from active slots"},{"name":"Reddit (WebSearch snippets)","url":"https://www.reddit.com/r/usvisascheduling/","status":"ok_snippets","detail":"r/usvisascheduling & r/h1b: H-1B interviews often centralized at Chennai/Hyderabad; Mumbai frequently biometrics-only; slots appear intermittently / bulk releases rare after Apr 2026"},{"name":"VisaHQ News (secondary)","url":"https://www.visahq.news/2026-09-22/in/real-time-data-show-us-visa-interview-slots-in-india-pushed-into-mid-2027-for-many-categories/","status":"ok","detail":"Sep 22–23 2026 article citing VisaSlots Info: some India posts drifting into mid-2027; treat as context only"}],"disclaimer":"Crowdsourced / third-party reports only. Not official. Book only on usvisascheduling.com."}</script>
+  <script>
+    const data = JSON.parse(document.getElementById("dashboard-data").textContent);
+    let filter = "all";
+
+    function fmtDate(d) {
+      if (!d) return "—";
+      try {
+        const x = new Date(d.length <= 10 ? d + "T12:00:00" : d);
+        if (Number.isNaN(x.getTime())) return d;
+        return x.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+      } catch { return d; }
+    }
+
+    function fmtUpdated(iso) {
+      if (!iso) return "—";
+      try {
+        const x = new Date(iso);
+        return x.toLocaleString("en-US", {
+          timeZone: "America/Los_Angeles",
+          dateStyle: "medium",
+          timeStyle: "short",
+        }) + " PT";
+      } catch { return iso; }
+    }
+
+    document.getElementById("updatedAt").textContent = fmtUpdated(data.updatedAt);
+
+    const slots = data.slots || [];
+    const bio = slots.filter(s => s.type === "biometrics").length;
+    const iv = slots.filter(s => s.type === "interview").length;
+    document.getElementById("stats").innerHTML = [
+      ["Reports", slots.length],
+      ["Biometrics", bio],
+      ["Interview", iv],
+      ["Sources", (data.sourcesChecked || []).length],
+    ].map(([l, n]) => `<div class="stat"><div class="n">${n}</div><div class="l">${l}</div></div>`).join("");
+
+    function matches(s) {
+      if (filter === "all") return true;
+      if (filter === "Mumbai" || filter === "Chennai") return s.city === filter;
+      return s.type === filter;
+    }
+
+    function renderTable() {
+      const rows = slots.filter(matches);
+      const tb = document.getElementById("tbody");
+      const empty = document.getElementById("empty");
+      if (!rows.length) {
+        tb.innerHTML = "";
+        empty.hidden = false;
+        return;
+      }
+      empty.hidden = true;
+      tb.innerHTML = rows.map(s => {
+        const isEst = /estimate/i.test(s.source || "");
+        const typeBadge = s.type === "biometrics"
+          ? '<span class="badge bio">Biometrics</span>'
+          : '<span class="badge int">Interview</span>';
+        const est = isEst ? '<span class="badge est">Estimate</span>' : "";
+        return `<tr>
+          <td><strong>${esc(s.city)}</strong></td>
+          <td>${typeBadge}${est}</td>
+          <td><strong>${fmtDate(s.availabilityDate)}</strong></td>
+          <td>${s.count != null ? esc(s.count) : "—"}</td>
+          <td><a href="${esc(s.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(s.source)}</a></td>
+          <td>${fmtDate(s.reportedAt)}</td>
+          <td class="notes">${esc(s.notes || "")}</td>
+        </tr>`;
+      }).join("");
+    }
+
+    function esc(s) {
+      return String(s ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    document.getElementById("filters").addEventListener("click", (e) => {
+      const btn = e.target.closest("button[data-filter]");
+      if (!btn) return;
+      filter = btn.dataset.filter;
+      document.querySelectorAll("#filters button").forEach(b => b.classList.toggle("active", b === btn));
+      renderTable();
+    });
+
+    document.getElementById("sources").innerHTML = (data.sourcesChecked || []).map(s => `
+      <li>
+        <div><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer"><strong>${esc(s.name)}</strong></a>
+          <span class="status ${esc(s.status)}"> · ${esc(s.status)}</span></div>
+        <div style="color:var(--muted);margin-top:0.25rem">${esc(s.detail || "")}</div>
+      </li>`).join("");
+
+    renderTable();
+  </script>
+</body>
+</html>
