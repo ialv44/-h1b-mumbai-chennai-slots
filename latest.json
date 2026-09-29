@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T07:01:13-07:00",
+  "updatedAt": "2026-09-29T12:46:22-07:00",
   "slots": [
     {
       "city": "Chennai",
@@ -10,6 +10,17 @@
       "source": "VisaGrader",
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "reportedAt": "2026-11-25T17:12:00Z",
+      "notes": "Parsed from VisaGrader HTML table"
+    },
+    {
+      "city": "Chennai",
+      "type": "biometrics",
+      "visa": "H-1B",
+      "availabilityDate": "2026-11-01",
+      "count": 100,
+      "source": "VisaGrader",
+      "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
+      "reportedAt": "2026-09-29T18:02:00Z",
       "notes": "Parsed from VisaGrader HTML table"
     },
     {
@@ -62,13 +73,13 @@
       "name": "VisaGrader India",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind",
       "status": "ok",
-      "detail": "Parsed 3 Mumbai/Chennai H-1B biometrics/interview row(s)"
+      "detail": "Parsed 4 Mumbai/Chennai H-1B biometrics/interview row(s)"
     },
     {
       "name": "VisaGrader Chennai H-1B",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "status": "ok",
-      "detail": "Parsed 3 Mumbai/Chennai H-1B biometrics/interview row(s)"
+      "detail": "Parsed 4 Mumbai/Chennai H-1B biometrics/interview row(s)"
     },
     {
       "name": "VisaGrader Mumbai H-1B",
@@ -97,8 +108,8 @@
     {
       "name": "CheckVisaSlots",
       "url": "https://checkvisaslots.com/",
-      "status": "no_public_data",
-      "detail": "Site reachable; no public Mumbai/Chennai H-1B slot table to parse"
+      "status": "blocked",
+      "detail": "HTTP 429"
     },
     {
       "name": "USVisaSlotsInfo H-1B",
