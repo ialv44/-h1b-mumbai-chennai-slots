@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T15:45:59-07:00",
+  "updatedAt": "2026-10-01T12:47:36-07:00",
   "slots": [
     {
       "city": "Chennai",
@@ -10,17 +10,6 @@
       "source": "VisaGrader",
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "reportedAt": "2026-11-25T17:12:00Z",
-      "notes": "Parsed from VisaGrader HTML table"
-    },
-    {
-      "city": "Chennai",
-      "type": "biometrics",
-      "visa": "H-1B",
-      "availabilityDate": "2026-11-01",
-      "count": 100,
-      "source": "VisaGrader",
-      "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
-      "reportedAt": "2026-09-29T18:02:00Z",
       "notes": "Parsed from VisaGrader HTML table"
     },
     {
@@ -38,22 +27,22 @@
       "city": "Mumbai",
       "type": "interview",
       "visa": "H-1B",
-      "availabilityDate": "2026-11-12",
+      "availabilityDate": "2026-11-15",
       "count": null,
       "source": "WaitDelta (estimate)",
       "sourceUrl": "https://waitdelta.com/visa-wait/us/mumbai/h1b",
-      "reportedAt": "2026-09-28",
+      "reportedAt": "2026-10-01",
       "notes": "Not a live calendar slot. WaitDelta ~45-day petition-based interview wait estimate."
     },
     {
       "city": "Chennai",
       "type": "interview",
       "visa": "H-1B",
-      "availabilityDate": "2026-11-12",
+      "availabilityDate": "2026-11-15",
       "count": null,
       "source": "WaitDelta (estimate)",
       "sourceUrl": "https://waitdelta.com/visa-wait/us/chennai/h1b",
-      "reportedAt": "2026-09-28",
+      "reportedAt": "2026-10-01",
       "notes": "Not a live calendar slot. WaitDelta ~45-day petition-based interview wait estimate."
     },
     {
@@ -73,13 +62,13 @@
       "name": "VisaGrader India",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind",
       "status": "ok",
-      "detail": "Parsed 4 Mumbai/Chennai H-1B biometrics/interview row(s)"
+      "detail": "Parsed 3 Mumbai/Chennai H-1B biometrics/interview row(s)"
     },
     {
       "name": "VisaGrader Chennai H-1B",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "status": "ok",
-      "detail": "Parsed 4 Mumbai/Chennai H-1B biometrics/interview row(s)"
+      "detail": "Parsed 3 Mumbai/Chennai H-1B biometrics/interview row(s)"
     },
     {
       "name": "VisaGrader Mumbai H-1B",
@@ -91,13 +80,13 @@
       "name": "WaitDelta Mumbai H-1B",
       "url": "https://waitdelta.com/visa-wait/us/mumbai/h1b",
       "status": "ok",
-      "detail": "Interview wait ~45 days; last updated September 28, 2026"
+      "detail": "Interview wait ~45 days; last updated October 1, 2026"
     },
     {
       "name": "WaitDelta Chennai H-1B",
       "url": "https://waitdelta.com/visa-wait/us/chennai/h1b",
       "status": "ok",
-      "detail": "Interview wait ~45 days; last updated September 28, 2026"
+      "detail": "Interview wait ~45 days; last updated October 1, 2026"
     },
     {
       "name": "VisaSlots.info",
