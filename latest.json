@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T12:47:36-07:00",
+  "updatedAt": "2026-10-08T06:53:59-07:00",
   "slots": [
     {
       "city": "Chennai",
@@ -55,6 +55,17 @@
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "reportedAt": "2026-11-23T20:53:00Z",
       "notes": "Parsed from VisaGrader HTML table"
+    },
+    {
+      "city": "Mumbai",
+      "type": "interview",
+      "visa": "H-1B",
+      "availabilityDate": "2026-12-01",
+      "count": 2,
+      "source": "VisaGrader",
+      "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/mumbai-P139/h1b-visa-H1B",
+      "reportedAt": "2026-12-08T04:34:00Z",
+      "notes": "Parsed from VisaGrader HTML table"
     }
   ],
   "sourcesChecked": [
@@ -62,7 +73,7 @@
       "name": "VisaGrader India",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind",
       "status": "ok",
-      "detail": "Parsed 3 Mumbai/Chennai H-1B biometrics/interview row(s)"
+      "detail": "Parsed 4 Mumbai/Chennai H-1B biometrics/interview row(s)"
     },
     {
       "name": "VisaGrader Chennai H-1B",
@@ -74,7 +85,7 @@
       "name": "VisaGrader Mumbai H-1B",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind/mumbai-P139/h1b-visa-H1B",
       "status": "ok",
-      "detail": "Parsed 0 Mumbai/Chennai H-1B biometrics/interview row(s); Mumbai page reports no recent H-1B activity"
+      "detail": "Parsed 1 Mumbai/Chennai H-1B biometrics/interview row(s)"
     },
     {
       "name": "WaitDelta Mumbai H-1B",
