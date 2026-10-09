@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T06:53:59-07:00",
+  "updatedAt": "2026-10-09T08:42:13-07:00",
   "slots": [
     {
       "city": "Chennai",
@@ -22,28 +22,6 @@
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "reportedAt": "2026-11-25T17:12:00Z",
       "notes": "Parsed from VisaGrader HTML table"
-    },
-    {
-      "city": "Mumbai",
-      "type": "interview",
-      "visa": "H-1B",
-      "availabilityDate": "2026-11-15",
-      "count": null,
-      "source": "WaitDelta (estimate)",
-      "sourceUrl": "https://waitdelta.com/visa-wait/us/mumbai/h1b",
-      "reportedAt": "2026-10-01",
-      "notes": "Not a live calendar slot. WaitDelta ~45-day petition-based interview wait estimate."
-    },
-    {
-      "city": "Chennai",
-      "type": "interview",
-      "visa": "H-1B",
-      "availabilityDate": "2026-11-15",
-      "count": null,
-      "source": "WaitDelta (estimate)",
-      "sourceUrl": "https://waitdelta.com/visa-wait/us/chennai/h1b",
-      "reportedAt": "2026-10-01",
-      "notes": "Not a live calendar slot. WaitDelta ~45-day petition-based interview wait estimate."
     },
     {
       "city": "Chennai",
@@ -91,13 +69,13 @@
       "name": "WaitDelta Mumbai H-1B",
       "url": "https://waitdelta.com/visa-wait/us/mumbai/h1b",
       "status": "ok",
-      "detail": "Interview wait ~45 days; last updated October 1, 2026"
+      "detail": "H-1B interview wait figures withheld by WaitDelta during source verification (checked Oct 9, 2026); no estimate shown"
     },
     {
       "name": "WaitDelta Chennai H-1B",
       "url": "https://waitdelta.com/visa-wait/us/chennai/h1b",
       "status": "ok",
-      "detail": "Interview wait ~45 days; last updated October 1, 2026"
+      "detail": "H-1B interview wait figures withheld by WaitDelta during source verification (checked Oct 9, 2026); no estimate shown"
     },
     {
       "name": "VisaSlots.info",
