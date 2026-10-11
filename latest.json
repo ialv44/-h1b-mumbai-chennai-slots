@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T08:42:13-07:00",
+  "updatedAt": "2026-10-11T13:00:33-07:00",
   "slots": [
     {
       "city": "Chennai",
@@ -10,7 +10,7 @@
       "source": "VisaGrader",
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "reportedAt": "2026-11-25T17:12:00Z",
-      "notes": "Parsed from VisaGrader HTML table"
+      "notes": "Parsed from VisaGrader HTML table. VisaGrader's 'Reported' timestamp is later than today (source-side date error); treat freshness as unverified."
     },
     {
       "city": "Chennai",
@@ -21,7 +21,7 @@
       "source": "VisaGrader",
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "reportedAt": "2026-11-25T17:12:00Z",
-      "notes": "Parsed from VisaGrader HTML table"
+      "notes": "Parsed from VisaGrader HTML table. VisaGrader's 'Reported' timestamp is later than today (source-side date error); treat freshness as unverified."
     },
     {
       "city": "Chennai",
@@ -32,7 +32,7 @@
       "source": "VisaGrader",
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "reportedAt": "2026-11-23T20:53:00Z",
-      "notes": "Parsed from VisaGrader HTML table"
+      "notes": "Parsed from VisaGrader HTML table. VisaGrader's 'Reported' timestamp is later than today (source-side date error); treat freshness as unverified."
     },
     {
       "city": "Mumbai",
@@ -43,7 +43,7 @@
       "source": "VisaGrader",
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/mumbai-P139/h1b-visa-H1B",
       "reportedAt": "2026-12-08T04:34:00Z",
-      "notes": "Parsed from VisaGrader HTML table"
+      "notes": "Parsed from VisaGrader HTML table. VisaGrader's 'Reported' timestamp is later than today (source-side date error); treat freshness as unverified."
     }
   ],
   "sourcesChecked": [
@@ -51,31 +51,31 @@
       "name": "VisaGrader India",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind",
       "status": "ok",
-      "detail": "Parsed 4 Mumbai/Chennai H-1B biometrics/interview row(s)"
+      "detail": "Parsed 4 Mumbai/Chennai H-1B biometrics/interview row(s) (checked Oct 11, 2026; unchanged since Oct 9)"
     },
     {
       "name": "VisaGrader Chennai H-1B",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "status": "ok",
-      "detail": "Parsed 3 Mumbai/Chennai H-1B biometrics/interview row(s)"
+      "detail": "Parsed 3 Mumbai/Chennai H-1B biometrics/interview row(s) (checked Oct 11, 2026; unchanged since Oct 9)"
     },
     {
       "name": "VisaGrader Mumbai H-1B",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind/mumbai-P139/h1b-visa-H1B",
       "status": "ok",
-      "detail": "Parsed 1 Mumbai/Chennai H-1B biometrics/interview row(s)"
+      "detail": "Parsed 1 Mumbai/Chennai H-1B biometrics/interview row(s) (checked Oct 11, 2026; unchanged since Oct 9)"
     },
     {
       "name": "WaitDelta Mumbai H-1B",
       "url": "https://waitdelta.com/visa-wait/us/mumbai/h1b",
       "status": "ok",
-      "detail": "H-1B interview wait figures withheld by WaitDelta during source verification (checked Oct 9, 2026); no estimate shown"
+      "detail": "H-1B interview wait figures withheld by WaitDelta during source verification (checked Oct 11, 2026); no estimate shown"
     },
     {
       "name": "WaitDelta Chennai H-1B",
       "url": "https://waitdelta.com/visa-wait/us/chennai/h1b",
       "status": "ok",
-      "detail": "H-1B interview wait figures withheld by WaitDelta during source verification (checked Oct 9, 2026); no estimate shown"
+      "detail": "H-1B interview wait figures withheld by WaitDelta during source verification (checked Oct 11, 2026); no estimate shown"
     },
     {
       "name": "VisaSlots.info",
