@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-10-11T13:00:33-07:00",
+  "updatedAt": "2026-10-13T07:00:26-07:00",
   "slots": [
+    {
+      "city": "Chennai",
+      "type": "interview",
+      "visa": "H-1B",
+      "availabilityDate": "2026-10-21",
+      "count": 7,
+      "source": "VisaSlots.info",
+      "sourceUrl": "https://www.visaslots.info/group/h1-h4/",
+      "reportedAt": "2026-10-13T04:28:01Z",
+      "notes": "Chennai CONSULAR H-1B earliest 2026 Oct 21 (7 slots), updated 13 Oct 04:28 UTC; Chennai/Mumbai VAC showed 0 as of 14:01 UTC \u2014 bio slot needed first"
+    },
     {
       "city": "Chennai",
       "type": "biometrics",
@@ -10,7 +21,7 @@
       "source": "VisaGrader",
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "reportedAt": "2026-11-25T17:12:00Z",
-      "notes": "Parsed from VisaGrader HTML table. VisaGrader's 'Reported' timestamp is later than today (source-side date error); treat freshness as unverified."
+      "notes": "Parsed from VisaGrader HTML table"
     },
     {
       "city": "Chennai",
@@ -21,7 +32,7 @@
       "source": "VisaGrader",
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "reportedAt": "2026-11-25T17:12:00Z",
-      "notes": "Parsed from VisaGrader HTML table. VisaGrader's 'Reported' timestamp is later than today (source-side date error); treat freshness as unverified."
+      "notes": "Parsed from VisaGrader HTML table"
     },
     {
       "city": "Chennai",
@@ -32,7 +43,7 @@
       "source": "VisaGrader",
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "reportedAt": "2026-11-23T20:53:00Z",
-      "notes": "Parsed from VisaGrader HTML table. VisaGrader's 'Reported' timestamp is later than today (source-side date error); treat freshness as unverified."
+      "notes": "Parsed from VisaGrader HTML table"
     },
     {
       "city": "Mumbai",
@@ -43,7 +54,7 @@
       "source": "VisaGrader",
       "sourceUrl": "https://visagrader.com/us-visa-time-slots-availability/india-ind/mumbai-P139/h1b-visa-H1B",
       "reportedAt": "2026-12-08T04:34:00Z",
-      "notes": "Parsed from VisaGrader HTML table. VisaGrader's 'Reported' timestamp is later than today (source-side date error); treat freshness as unverified."
+      "notes": "Parsed from VisaGrader HTML table"
     }
   ],
   "sourcesChecked": [
@@ -51,37 +62,37 @@
       "name": "VisaGrader India",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind",
       "status": "ok",
-      "detail": "Parsed 4 Mumbai/Chennai H-1B biometrics/interview row(s) (checked Oct 11, 2026; unchanged since Oct 9)"
+      "detail": "Parsed 4 Mumbai/Chennai H-1B biometrics/interview row(s)"
     },
     {
       "name": "VisaGrader Chennai H-1B",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind/chennai-P48/h1b-visa-H1B",
       "status": "ok",
-      "detail": "Parsed 3 Mumbai/Chennai H-1B biometrics/interview row(s) (checked Oct 11, 2026; unchanged since Oct 9)"
+      "detail": "Parsed 3 Mumbai/Chennai H-1B biometrics/interview row(s)"
     },
     {
       "name": "VisaGrader Mumbai H-1B",
       "url": "https://visagrader.com/us-visa-time-slots-availability/india-ind/mumbai-P139/h1b-visa-H1B",
       "status": "ok",
-      "detail": "Parsed 1 Mumbai/Chennai H-1B biometrics/interview row(s) (checked Oct 11, 2026; unchanged since Oct 9)"
+      "detail": "Parsed 1 Mumbai/Chennai H-1B biometrics/interview row(s)"
     },
     {
       "name": "WaitDelta Mumbai H-1B",
       "url": "https://waitdelta.com/visa-wait/us/mumbai/h1b",
       "status": "ok",
-      "detail": "H-1B interview wait figures withheld by WaitDelta during source verification (checked Oct 11, 2026); no estimate shown"
+      "detail": "Could not parse wait days"
     },
     {
       "name": "WaitDelta Chennai H-1B",
       "url": "https://waitdelta.com/visa-wait/us/chennai/h1b",
       "status": "ok",
-      "detail": "H-1B interview wait figures withheld by WaitDelta during source verification (checked Oct 11, 2026); no estimate shown"
+      "detail": "Could not parse wait days"
     },
     {
       "name": "VisaSlots.info",
-      "url": "https://visaslots.info/",
-      "status": "blocked",
-      "detail": "HTTP 403 (likely Cloudflare)"
+      "url": "https://www.visaslots.info/group/h1-h4/",
+      "status": "ok",
+      "detail": "Via web fetch (curl gets 403): Chennai consular H-1B 2026-10-21 \u00d77 (04:28 UTC Oct 13); Mumbai consular 0 (Oct 9); Mumbai & Chennai VAC 0 (14:01 UTC Oct 13)"
     },
     {
       "name": "CheckVisaSlots",
@@ -99,13 +110,19 @@
       "name": "Reddit (WebSearch snippets)",
       "url": "https://www.reddit.com/r/usvisascheduling/",
       "status": "ok_snippets",
-      "detail": "r/usvisascheduling & r/h1b: H-1B interviews often centralized at Chennai/Hyderabad; Mumbai frequently biometrics-only; slots appear intermittently / bulk releases rare after Apr 2026"
+      "detail": "r/usvisascheduling & r/USVisaIndians: no new Mumbai/Chennai H-1B drop reports today; older threads note H-1B interviews often centralized at Chennai/Hyderabad"
     },
     {
       "name": "VisaHQ News (secondary)",
       "url": "https://www.visahq.news/2026-09-22/in/real-time-data-show-us-visa-interview-slots-in-india-pushed-into-mid-2027-for-many-categories/",
       "status": "ok",
-      "detail": "Sep 22–23 2026 article citing VisaSlots Info: some India posts drifting into mid-2027; treat as context only"
+      "detail": "Sep 22\u201323 2026 article citing VisaSlots Info: some India posts drifting into mid-2027; treat as context only"
+    },
+    {
+      "name": "EarlyVisaSlots (single-source, commercial)",
+      "url": "https://www.earlyvisaslots.in/visa-slots/h1b-stamping",
+      "status": "unverified",
+      "detail": "Oct 13: Chennai VAC 30 Dec 2026 (2), 08 Jan 2027 (1); Chennai 08 Jan 2027; Mumbai 26 Nov, 14 Dec, 24 Dec 2026, 20 Jan, 06 Feb 2027 \u2014 not corroborated"
     }
   ],
   "disclaimer": "Crowdsourced / third-party reports only. Not official. Book only on usvisascheduling.com."
