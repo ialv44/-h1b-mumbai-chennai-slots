@@ -1,6 +1,17 @@
 {
-  "updatedAt": "2026-10-13T19:49:25-07:00",
+  "updatedAt": "2026-10-14T06:47:41-07:00",
   "slots": [
+    {
+      "city": "Chennai",
+      "type": "interview",
+      "visa": "H-1B",
+      "availabilityDate": "2026-10-22",
+      "count": 38,
+      "source": "CheckVisaSlots",
+      "sourceUrl": "https://checkvisaslots.com/latest-us-visa-availability/h-1b-regular/",
+      "reportedAt": "2026-10-14T09:03:00Z",
+      "notes": "Chennai CONSULAR H-1B earliest 22 Oct 2026 (38 slots on that date, 7 dates total), last seen 14 Oct 09:03 UTC; single-source (VisaSlots.info Chennai consular showed 0 at 08:46 UTC); Chennai/Mumbai VAC 0 on VisaSlots.info at ~13:20-13:47 UTC — bio slot needed first"
+    },
     {
       "city": "Chennai",
       "type": "biometrics",
@@ -69,25 +80,25 @@
       "name": "WaitDelta Mumbai H-1B",
       "url": "https://waitdelta.com/visa-wait/us/mumbai/h1b",
       "status": "ok",
-      "detail": "H-1B figures withheld by WaitDelta pending source-mapping verification"
+      "detail": "Could not parse wait days"
     },
     {
       "name": "WaitDelta Chennai H-1B",
       "url": "https://waitdelta.com/visa-wait/us/chennai/h1b",
       "status": "ok",
-      "detail": "H-1B figures withheld by WaitDelta pending source-mapping verification"
+      "detail": "Could not parse wait days"
     },
     {
       "name": "VisaSlots.info",
-      "url": "https://www.visaslots.info/group/h1-h4/",
+      "url": "https://visaslots.info/",
       "status": "ok",
-      "detail": "Via web fetch (curl gets 403): H-1B Mumbai VAC 0 (00:54 UTC Oct 14), Chennai VAC 0 (01:50 UTC Oct 14), Chennai consular 0 (14:32 UTC Oct 13), Mumbai consular 0 (Oct 9)"
+      "detail": "Via web fetch (curl gets 403): H-1B Mumbai/Chennai consular 0 (08:42-08:46 UTC Oct 14), Mumbai VAC 0 (13:20 UTC), Chennai VAC 0 (13:46 UTC Oct 14)"
     },
     {
       "name": "CheckVisaSlots",
-      "url": "https://checkvisaslots.com/latest-us-visa-availability/h-1b-regular/",
+      "url": "https://checkvisaslots.com/",
       "status": "ok",
-      "detail": "Via web fetch (script gets 429): Chennai consular 08 Nov 2027 ×1 (last seen Oct 10); Chennai VAC 05 Nov 2027 (Oct 13); Mumbai VAC 09 Nov 2026 (stale, last seen Oct 7, contradicted by VisaSlots.info 0) — no new in-window dates"
+      "detail": "Via web fetch (script gets 429): NEW Chennai consular 22 Oct 2026 ×38, 7 dates (last seen 14 Oct 09:03 UTC); Chennai VAC 05 Nov 2027 (10:28 UTC); Mumbai VAC 09 Nov 2026 stale (Oct 7)"
     },
     {
       "name": "USVisaSlotsInfo H-1B",
@@ -99,32 +110,14 @@
       "name": "Reddit (WebSearch snippets)",
       "url": "https://www.reddit.com/r/usvisascheduling/",
       "status": "ok_snippets",
-      "detail": "r/usvisascheduling & r/USVisaIndians (search snippets Oct 13 evening): no new Mumbai/Chennai H-1B drop reports"
+      "detail": "r/usvisascheduling & r/USVisaIndians (search snippets Oct 14 morning): no new Mumbai/Chennai H-1B drop reports"
     },
     {
       "name": "VisaHQ News (secondary)",
       "url": "https://www.visahq.news/2026-09-22/in/real-time-data-show-us-visa-interview-slots-in-india-pushed-into-mid-2027-for-many-categories/",
       "status": "ok",
       "detail": "Sep 22–23 2026 article citing VisaSlots Info: some India posts drifting into mid-2027; treat as context only"
-    },
-    {
-      "name": "EarlyVisaSlots (single-source, commercial)",
-      "url": "https://www.earlyvisaslots.in/visa-slots/h1b-stamping",
-      "status": "unverified",
-      "detail": "Oct 14 07:05 IST page: Chennai VAC 23 Dec 2026 (1), 28 Dec 2026 (1) [was 30 Dec 2026 (2), 08 Jan 2027 (1)]; Chennai consular 27 Jan (4), 08 Feb (5), 18 Feb (3), 19 Feb 2027 (5); Mumbai 19 Dec 2026 (1), 30 Dec 2026 (2), 08 Feb (4), 17 Feb (3), 04 Mar 2027 (1) — not corroborated (VisaSlots.info Chennai VAC 0)"
-    },
-    {
-      "name": "VisaHurry (human log)",
-      "url": "https://visahurry.com/h1b-slots-india.html",
-      "status": "ok",
-      "detail": "Mumbai H-1B no open dates (Oct 8); Chennai 6 May 2027 (logged Sep 17)"
     }
   ],
-  "disclaimer": "Crowdsourced / third-party reports only. Not official. Book only on usvisascheduling.com.",
-  "runSummary": {
-    "run": "2026-10-13 19:48 PT",
-    "dataChangedBeyondTimestamp": true,
-    "alertWarranted": false,
-    "notes": "VisaGrader/VisaSlots.info/CheckVisaSlots unchanged; only EarlyVisaSlots (single-source) Chennai VAC shifted 30 Dec/08 Jan → 23 Dec/28 Dec 2026 (uncorroborated; VisaSlots.info Chennai VAC 0); no alert"
-  }
+  "disclaimer": "Crowdsourced / third-party reports only. Not official. Book only on usvisascheduling.com."
 }
