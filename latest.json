@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T15:48:37-07:00",
+  "updatedAt": "2026-10-20T23:49:59-07:00",
   "slots": [
     {
       "city": "Chennai",
@@ -60,12 +60,23 @@
       "city": "Mumbai",
       "type": "biometrics",
       "visa": "H-1B",
-      "availabilityDate": "2026-11-05",
-      "count": 2,
+      "availabilityDate": "2026-10-22",
+      "count": null,
       "source": "CheckVisaSlots",
       "sourceUrl": "https://checkvisaslots.com/latest-us-visa-availability/h-1b-regular/",
-      "reportedAt": "2026-10-20T16:46:00Z",
-      "notes": "Mumbai VAC H-1B earliest 05 Nov 2026 (2 slots, 1 date), last seen 20 Oct 16:46 UTC (~9:46 AM PT), per CheckVisaSlots snapshot 22:32 UTC; VisaSlots.info Mumbai VAC showed 0 at 21:49 UTC (later), so it may already be taken; verify manually on the official portal"
+      "reportedAt": "2026-10-21T06:21:00Z",
+      "notes": "Mumbai VAC, 1 date; NEW (was 2026-11-05). VisaSlots.info showed 0 at 06:40 UTC"
+    },
+    {
+      "city": "Chennai",
+      "type": "biometrics",
+      "visa": "H-1B",
+      "availabilityDate": "2026-10-25",
+      "count": null,
+      "source": "CheckVisaSlots",
+      "sourceUrl": "https://checkvisaslots.com/latest-us-visa-availability/h-1b-regular/",
+      "reportedAt": "2026-10-21T06:00:00Z",
+      "notes": "Chennai VAC, 1 date; NEW (was 2027-10-26). VisaSlots.info showed 0 at 06:38 UTC"
     },
     {
       "city": "Chennai",
@@ -76,18 +87,7 @@
       "source": "CheckVisaSlots",
       "sourceUrl": "https://checkvisaslots.com/latest-us-visa-availability/h-1b-regular/",
       "reportedAt": "2026-10-20T16:59:00Z",
-      "notes": "Chennai CONSULAR (interview) H-1B earliest 27 Oct 2026 (7 slots, 2 dates), last seen 20 Oct 16:59 UTC (~9:59 AM PT), per CheckVisaSlots snapshot 22:32 UTC; VisaSlots.info Chennai consular 0 at 21:57 UTC; verify manually on the official portal"
-    },
-    {
-      "city": "Chennai",
-      "type": "biometrics",
-      "visa": "H-1B",
-      "availabilityDate": "2027-09-28",
-      "count": null,
-      "source": "CheckVisaSlots",
-      "sourceUrl": "https://checkvisaslots.com/latest-us-visa-availability/h-1b-regular/",
-      "reportedAt": "2026-10-20T21:56:00Z",
-      "notes": "Chennai VAC H-1B earliest now 28 Sep 2027 (count N/A, 1 date), last seen 20 Oct 21:56 UTC, per CheckVisaSlots snapshot 22:32 UTC; beyond the March 2027 window; VisaSlots.info Chennai VAC 0 at 22:28 UTC"
+      "notes": "Chennai consular, 2 dates; unchanged"
     }
   ],
   "sourcesChecked": [
@@ -123,15 +123,15 @@
     },
     {
       "name": "VisaSlots.info",
-      "url": "https://visaslots.info/class/h-1b/",
-      "status": "ok",
-      "detail": "Script fetch 403; H-1B page via search snapshot 22:36 UTC: all Mumbai/Chennai VAC and consular 0"
+      "url": "https://visaslots.info/",
+      "status": "blocked",
+      "detail": "HTTP 403 (likely Cloudflare)"
     },
     {
       "name": "CheckVisaSlots",
       "url": "https://checkvisaslots.com/",
-      "status": "ok",
-      "detail": "Script fetch HTTP 429, WebFetch 403; parsed via search-index snapshot generated 20 Oct 2026 22:32 UTC"
+      "status": "blocked",
+      "detail": "HTTP 403"
     },
     {
       "name": "USVisaSlotsInfo H-1B",
@@ -143,7 +143,7 @@
       "name": "Reddit",
       "url": "https://www.reddit.com/r/usvisascheduling/",
       "status": "blocked_json_search_ok",
-      "detail": "JSON API/old.reddit blocked; web search Oct 20 ~3:50 PM PT: no fresh Mumbai/Chennai H-1B drop reports on r/usvisascheduling or r/USVisaIndians"
+      "detail": "Web search Oct 20 ~5:50 PM PT: no fresh Mumbai/Chennai H-1B drop reports"
     }
   ],
   "disclaimer": "Crowdsourced / third-party reports only. Not official. Book only on usvisascheduling.com."
