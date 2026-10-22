@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-21T09:55:00-07:00",
+  "updatedAt": "2026-10-22T15:45:00-07:00",
   "slots": [
     {
       "city": "Chennai",
@@ -72,11 +72,11 @@
       "type": "biometrics",
       "visa": "H-1B",
       "availabilityDate": "2026-11-13",
-      "count": 24,
+      "count": 74,
       "source": "CheckVisaSlots",
       "sourceUrl": "https://checkvisaslots.com/latest-us-visa-availability/h-1b-regular/",
-      "reportedAt": "2026-10-22T07:08:00Z",
-      "notes": "Chennai VAC NEW: 13 Nov 2026, 24 slots on earliest date; last seen 07:08 UTC (12:08 AM PT Oct 22). Was 2027-10-22. VisaSlots.info Chennai VAC shows 0 at 08:41 UTC, so may already be gone. H-4 Chennai VAC also shows 13 Nov."
+      "reportedAt": "2026-10-22T21:56:00Z",
+      "notes": "Chennai VAC: 13 Nov 2026, 74 slots on earliest date; re-seen 21:56 UTC (2:56 PM PT Oct 22) after last sighting 07:08 UTC. VisaSlots.info Chennai VAC shows 0 at 22:26 UTC, so may already be gone."
     },
     {
       "city": "Chennai",
