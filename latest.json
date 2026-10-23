@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T23:50:58-07:00",
+  "updatedAt": "2026-10-23T05:45:58-07:00",
   "slots": [
     {
       "city": "Chennai",
@@ -50,11 +50,11 @@
       "type": "biometrics",
       "visa": "H-1B",
       "availabilityDate": "2026-11-13",
-      "count": 42,
+      "count": 24,
       "source": "CheckVisaSlots",
       "sourceUrl": "https://checkvisaslots.com/latest-us-visa-availability/h-1b-regular/",
-      "reportedAt": "2026-10-23T04:57:00Z",
-      "notes": "Chennai VAC: 13 Nov 2026, 42 slots, 1 date; last seen 04:57 UTC Oct 23."
+      "reportedAt": "2026-10-23T13:42:00Z",
+      "notes": "Chennai VAC: earliest 13 Nov 2026, 24 slots on earliest date, 1 date total; last seen 12:32 UTC Oct 23 (reappeared after vanishing ~10:27 UTC). VisaSlots.info also shows Chennai VAC 2026-11-13 (1 slot) at 12:38 UTC."
     },
     {
       "city": "Mumbai",
@@ -102,14 +102,14 @@
     {
       "name": "VisaSlots.info",
       "url": "https://visaslots.info/",
-      "status": "blocked",
-      "detail": "HTTP 403 (likely Cloudflare)"
+      "status": "ok_via_search",
+      "detail": "Search snapshot 12:38 UTC Oct 23: Chennai VAC 2026-11-13 x1; Mumbai VAC 0; all H-1B consular 0"
     },
     {
       "name": "CheckVisaSlots",
       "url": "https://checkvisaslots.com/",
-      "status": "ok",
-      "detail": "Script got HTTP 429; rows taken from public page snapshot generated 06:50 UTC Oct 23"
+      "status": "ok_via_search",
+      "detail": "Script 429/WebFetch 403; search snapshot 12:32 UTC Oct 23: Chennai consular 30 Oct 2026 x6 (05:44 UTC), Chennai VAC 13 Nov 2026 x24 (12:32 UTC), Mumbai VAC 22 Oct 2026 stale"
     },
     {
       "name": "USVisaSlotsInfo H-1B",
@@ -124,5 +124,6 @@
       "detail": "Oct 21 ~9:50 AM PT: no fresh Mumbai/Chennai H-1B drop reports found"
     }
   ],
-  "disclaimer": "Crowdsourced / third-party reports only. Not official. Book only on usvisascheduling.com."
+  "disclaimer": "Crowdsourced / third-party reports only. Not official. Book only on usvisascheduling.com.",
+  "generatedAt": "2026-10-23T13:45:00Z"
 }
